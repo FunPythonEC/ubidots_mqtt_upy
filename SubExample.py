@@ -27,7 +27,7 @@ while True:
     try:
         client.wait_msg()
         
-    except KeyboardInterrupt:
-        print('Ctrl-C pressed...exiting')
+    except Exception as e:
+        print(e)
         client.disconnect()
         sys.exit()
